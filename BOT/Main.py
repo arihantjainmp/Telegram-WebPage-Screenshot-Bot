@@ -37,7 +37,7 @@ def screenshot(update: Update, context: CallbackContext) -> None:
         update.message.reply_text('Usage: /screenshot <url>')
 
 def help(update: Update, context: CallbackContext) -> None:
-    update.message.reply_text('Instructions\nUse /screenshot <url> to get the screenshot of a webpage.\nMake sure you enter the full URL (including http/https)\nExample : https://www.google.com\n\nThis bot is developed and maintained by Arihant Jain')
+    update.message.reply_text('Hello !\nUse the command /screenshot followed by the url of the website to get a screenshot of the webage.\n Make sure you include the entire url (Including http/https)\n \nExample : /screenshot https://www.google.com\n \nThis bot is developed and maintained by Arihant Jain')
 
 
 def main():
@@ -50,7 +50,7 @@ def main():
 
     # on different commands - answer in Telegram
     dispatcher.add_handler(CommandHandler("start", start))
-    dispatcher.add_handler(CommandHandler("help", start))
+    dispatcher.add_handler(CommandHandler("help", help))
     dispatcher.add_handler(CommandHandler("screenshot", screenshot))
 
     # Start the Bot
